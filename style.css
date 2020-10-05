@@ -1,0 +1,323 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Roboto", Grotesque, sans-serif;
+	/* background-color: hsla(214, 35%, 37%, 0.1); */
+	margin: 10px 100px;
+}
+
+:root {
+	--purple: #3d5a80;
+	--blue: #98c1d9;
+	--cyan: #e0fbfc;
+	--red: #ee6c4d;
+	--orange: #e99753;
+	--green: #69ba84;
+	--darkblue: #293241;
+	--gray: #333333;
+	--black: #191919;
+	--white: #ffffff;
+	--grey: hsla(0, 0%, 0%, 0.2);
+}
+
+
+/* LINKS */
+
+
+ul li {
+	list-style-type: none;
+	background-color: hsla(191, 100%, 50%, .2);
+	margin: 2% 3%;
+	border-radius: 20px;
+}
+
+
+li a {
+	display: block;
+    color: #000;
+    padding: 10px 16px;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+li a:visited {
+	color: hsla(0, 0%, 0%, 0.5);
+}
+
+li a:hover {
+	background-color: #555;
+	color: white;
+	border-radius: 20px;
+}
+
+a:active {
+	background-color: #555;
+	color: white;
+	border-radius: 16px;
+}
+
+li a.selected{
+	background-color: #555;
+	color: var(--white);
+	border-radius: 20px;
+  }
+
+.nav-header {
+	padding-left: 4%;
+	font-size: 12px;
+	border: 3px solid #555;
+	border-radius: 16px;
+	padding: 4px 16px;
+	margin: 2% 3%;
+}  
+
+ 
+
+
+
+/* NAVBAR */
+
+ul {
+    list-style-type: none;
+	margin: 0;
+	margin-left: 5px;
+	padding: 0;
+    /* width: 25%; */
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: minmax(225px, 1fr) 3fr;
+	grid-template-areas:
+	"title title title title"
+	"left right right right";
+}
+
+.title {
+	grid-area: title;
+	padding: 2% 1%;
+	text-align: left;
+	font-size: 35px;
+	font-weight: 800;
+}
+
+.left {
+	grid-area: left;
+	display: contents;
+}
+
+/* CONTENT */
+
+hr {
+	width: 98%;
+	height: 1px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:#666;
+	border: 0 none;
+	margin-top: 75px;
+	margin-bottom: 75px;
+	}
+
+.markup {
+	font-family: Menlo,Monaco,"Courier New",Courier,monospace;
+	background: rgba(0,0,0,.05);
+	border-radius: 4px; 
+    padding: 3px 4px;
+	margin: 0 2px;
+	font-size: 15px;
+}
+
+.right {
+	grid-area: right;
+	margin: 0 px 10px;
+}
+
+.main-info {
+	list-style-position: outside;
+	text-indent: -1.35em;
+	padding-left: 7%;
+	padding-bottom: 1%;
+}
+
+.main-section {
+	padding: 0px 10px;
+}
+
+header {
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.display-property {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.display-description {
+	padding: 1% 0%;
+}
+
+.html-heading {
+	background: hsla(165, 100%, 50%, .5);
+	border-radius: 20px;
+	padding: 2%;
+	margin: 1% 0% 0% 0%;
+}
+
+.html-style {
+	font-family: Menlo,Monaco,"Courier New",Courier,monospace;
+	background: rgba(0,0,0,.05);
+	border-radius: 20px; 
+    padding: 3% 2% 3% 4%;
+	margin: .5% 0% 3% 0%;
+	font-size: 14px;
+}
+
+.css-heading {
+	background: hsla(46, 100%, 50%, .3);
+	border-radius: 20px;
+	padding: 2%;
+	margin: 1% 0% 0% 0%;
+}
+
+.css-style {
+	font-family: Menlo,Monaco,"Courier New",Courier,monospace;
+	background: rgba(0,0,0,.05);
+	border-radius: 20px; 
+    padding: 3% 2% 3% 1%;
+	margin: .5% 0% 4% 0%;
+	font-size: 14px;
+}
+
+img {
+	width: 500px;
+}
+
+.caption {
+	margin-top: 0px;
+	margin-left: 2%;
+	color: rgba(0,0,0,.7);
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 930px) {
+	
+	body {
+		margin: 0px;
+	}
+
+	.container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"title"
+		"left"
+		"right";
+		grid-template-rows: 2% 210px 1fr;
+	}
+
+	.nav-header {
+		padding-top: 2%;
+	}  
+
+	.title {
+		grid-area: title;
+		padding: 4%;
+		display: flex;
+		align-items: center;
+  	justify-content: center;
+	}
+
+	.nav-header {
+		padding-left: 4%;
+		font-size: 12px;
+		border: 3px solid #555;
+		border-radius: 16px;
+		padding: 4px 16px;
+		margin: 2% 3%;
+	}  
+
+	nav {
+		max-height: 100%;
+		overflow: scroll;
+		border-top: 2px solid hsla(214, 35%, 37%, 0.3);
+		border-bottom: 2px solid hsla(214, 35%, 37%, 0.3);
+	}
+
+	.right {
+		padding-top: 5px;
+		margin: 2% 3%;
+	}
+
+	img {
+		/* width: 400px; */
+	}
+
+
+
+}
+
+@media (max-width: 450px) {
+	
+	
+	body {
+		width: auto;
+	}
+	
+	.container {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"title"
+		"left"
+		"right";
+		grid-template-rows: 3% 225px 1fr;
+	}
+
+	.title {
+		grid-area: title;
+		padding: 3%;
+		display: flex;
+		align-items: center;
+  	justify-content: center;
+	}
+
+	nav {
+		height: 100%;
+		overflow: scroll;
+		border-top: 2px solid hsla(214, 35%, 37%, 0.3);
+		border-bottom: 2px solid hsla(214, 35%, 37%, 0.3);
+	}
+
+	.nav-container {
+		position: fixed;
+	}
+	
+	li a {
+	font-weight: 600;
+}
+
+	.right {
+		margin-top: 4%;
+	}
+
+	img {
+		width: 300px;
+	}
+
+}
